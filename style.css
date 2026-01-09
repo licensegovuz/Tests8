@@ -1,0 +1,181 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #111827; 
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #ffffff;
+    width: 92%;
+    max-width: 420px;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    animation: fade 0.4s ease;
+    text-align: center;
+    color: #111827;
+}
+
+/* ===== HEADER ===== */
+h2 {
+    margin: 0 0 12px;
+    text-align: center;
+    color: #111827;
+}
+
+/* ===== TIMER ===== */
+#timer {
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+/* ===== QUESTION BOX (ИСПРАВЛЕНО) ===== */
+#question {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #000000 !important; /* Принудительно черный цвет */
+    text-align: left;
+    line-height: 1.4;
+}
+
+/* ===== PROGRESS TEXT (Вопрос 1 из 15 - ИСПРАВЛЕНО) ===== */
+.progress {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: #374151 !important; /* Темно-серый, почти черный */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 4px;
+}
+
+/* ===== OPTIONS ===== */
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button.option {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    background: #f1f5f9;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #111827 !important; /* Всегда черный текст */
+    text-align: center;
+    opacity: 1; /* Чтобы не было прозрачности */
+}
+
+button.option:disabled {
+    cursor: default;
+    color: #111827 !important;
+    opacity: 1;
+}
+
+button.option.selected {
+    background: #eef2ff;
+    box-shadow: inset 0 0 0 2px #6366f1;
+    color: #1e3a8a !important;
+}
+
+button.option.correct {
+    background: #dcfce7 !important;
+    color: #166534 !important;
+    border: 2px solid #22c55e;
+}
+
+button.option.wrong {
+    background: #fee2e2 !important;
+    color: #991b1b !important;
+    border: 2px solid #ef4444;
+}
+
+/* ===== MAIN BUTTON ===== */
+button.main {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 14px;
+    border: none;
+    background: #6366f1;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button.main:disabled {
+    background: #a5b4fc;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+/* ===== NAV BUTTONS ===== */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 4%;
+}
+
+.nav-buttons button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 16px;
+    background: #6366f1;
+    color: white;
+    transition: 0.2s;
+}
+
+/* ===== TIMER WARNING ===== */
+.timer.warning {
+    color: #dc2626;
+    font-weight: 700;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1 }
+    50% { opacity: .6 }
+    100% { opacity: 1 }
+}
+
+/* ===== INPUT / SELECT ===== */
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    flex: 1;
+    color: #111827; /* Черный текст в полях ввода */
+    background: #fff;
+}
+
+.muted {
+    font-size: 13px;
+    text-align: center;
+    color: #6b7280;
+}
+
